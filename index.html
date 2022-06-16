@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Form</title>
+</head>
+
+<body>
+    <header>
+        <h1>Predaj bytov</h1>
+    </header>
+    <div class="container">
+        <form action="https://iolab.sk/form2mail/form2mail.php" method="post" enctype="multipart/form-data"
+            onchange="Submit()">
+            <input type="hidden" name="apikey" value="98af10706f616de72b67e839779a6973">
+            <input type="hidden" name="from" value="xkurek@stuba.sk">
+            <input type="hidden" name="sender" value="David Kurek">
+            <input type="hidden" name="to" value="feistu02@gmail.com">
+            <input type="hidden" name="subject" value="Z3_kurek">
+            <input type="hidden" name="redirectOk" value="https://webte1.fei.stuba.sk/~xkurek/Cvicko01/index.html">
+            <input type="hidden" name="redirectFalse" value="https://webte1.fei.stuba.sk/~xkurek/Cvickoo02/index.html">
+
+            <div class="main">
+                <div class="pravo">
+                    <label for="fname">Meno*</label><br>
+                    <input type="text" id="fname" name="Meno" placeholder="Stanislav" required>
+                    <br>
+                    <label for="lname">Priezvisko*</label><br>
+                    <input type="text" id="lname" name="Priezvisko" placeholder="Novotný" required>
+                    <br>
+                    <label for="Bdate">Dátum narodenia*</label><br>
+                    <input type="date" id="Bdate" name="Dátum narodenia" onchange="Correct()" required>
+                    <br>
+                    <label for="age">Vek*</label><br>
+                    <input type="text" id="age" name="Vek" placeholder="171" onchange="Correct()" required>
+                    <br>
+                    <label for="email">Email*</label><br>
+                    <input type="text" id="email" name="Email" placeholder="vzor@email.com" onchange="CorrectEmail()"
+                        required>
+                    <p><i>* povinné položky</i>
+                    <p>
+
+                </div>
+                <div class="lavo">
+                    <div class="plus">
+                        <input type="checkbox" id="coding" name="Balkón" value="zaskrtnute">
+                        <label for="coding">Balkón</label>
+                    </div>
+                    <div class="plus">
+                        <input type="checkbox" id="music" name="Lodžia" value="zaskrtnute">
+                        <label for="music">Lodžia</label>
+                    </div>
+                    <div class="plus">
+                        <input type="checkbox" id="other" name="Viac" value="other" onchange="ShowHide()">
+                        <label for="other">Viac</label>
+                        <input type="text" id="otherValue" name="Viac">
+                    </div>
+                    <label> Lokalita*</label>
+                    <br>
+                    <select class="form-control" name="Lokalita" id="Lokalita" required>
+                        <option value="" selected="selected">Select</option>
+                    </select>
+                    <br>
+                    <label> Časť mesta*</label>
+                    <br>
+                    <select class="form-control" name="Časť" id="Časť" required>
+                        <option value="" selected="selected">Select</option>
+                    </select>
+                    <br>
+                    <label> Byt*</label>
+                    <br>
+                    <select class="form-control" name="Počet_izieb" id="Počet_izieb" required>
+                        <option value="" selected="selected">Select</option>
+                    </select>
+                    <br>
+                    <div class="kontakt">
+                        <h3>Kontakt</h3>
+                        <input type="radio" id="contactChoice1" name="contact" value="Email" checked
+                            onchange="PhoneNum()">
+                        <label for="contactChoice1">Email</label>
+                        <br>
+                        <input type="radio" id="contactChoice2" name="contact" value="Phone" onchange="PhoneNum()">
+                        <label for="contactChoice2">Phone</label>
+                        <input type="text" id="phone" name="tel.číslo: " placeholder="tel. číslo">
+                        <br>
+                        <input type="radio" id="contactChoice3" name="contact" value="Osobne" onchange="PhoneNum()">
+                        <label for="contactChoice3">Osobne</label>
+                    </div>
+                    <div class=poznamka>
+                        <label for="poznamka">Poznamka</label><br>
+                        <textarea id="poznamka" name="poznamka" placeholder="Poznamka.." cols="15"></textarea>
+                    </div>
+                </div>
+                <div class="submit">
+                    <input type="submit" id="submit" value="Submit">
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

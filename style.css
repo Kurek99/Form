@@ -1,0 +1,124 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+input[type=text],input[type=date], select, textarea {
+  border-radius: 10px;
+    padding: 12px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  input[type=submit] {
+    background-color: #251101;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  .container {
+    border-radius: 5px;
+    margin: auto;
+    display: grid;
+    margin: 0 10%;
+  } 
+  #otherValue{
+    display: none;
+  }
+  .pravo{
+    color: aliceblue;
+    border-radius: 10px;
+    background-color: #8b0046;
+    float: left;
+    display: grid;
+    float: left;
+    width: 50.5%;
+    height: 550px;
+    text-align: center;
+  }
+  .plus{
+    margin: 2%;
+  }
+  .lavo{
+    color: aliceblue;
+    border-radius: 10px;
+    background-color: #5B1865;
+    float: right;
+    width: 49.09%;
+    height: 550px;
+  }
+  .main{
+    background-color: #2C5784;
+    height: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    display: inline-table;
+    margin-left: 20%;
+    width: 60%;
+  }
+  h1{
+      text-align: center;
+      color: #FFFF;
+  }
+  html{
+    background-image: url('city.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+      background-color: #2C5784;
+  }
+  textarea {
+    border-radius: 10px;
+    max-width: 90%;
+    max-height: 50px;
+  }
+  label{
+    margin: 5px;
+  }
+  .submit{
+    text-align: center;
+    display: table-row;
+  }
+  h3{
+    margin: 0;
+    text-align: center;
+  }
+  #phone{
+    display: none;
+  }
+  #contactChoice1,#contactChoice2,#contactChoice3{
+    margin-left: 5px;
+  }
+  .poznamka{
+    margin-top: 10px;
+  }
+  #submit{
+    display: none;
+  }
+  @media (max-width: 876px){
+    .pravo{
+        float: none;
+        width: auto;
+        height: auto;
+      }
+      .lavo{
+        float: none;
+        width: auto;
+        height: auto;
+      }
+      .container{
+        justify-content: space-around;
+      }
+      .main{
+        margin-left:0%;
+        width: 400px;
+      }
+      textarea {
+        max-width: 60%;
+      }
+  }
