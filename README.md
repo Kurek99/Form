@@ -1,2 +1,2 @@
 # Form
-Form for the sale of apartments
+You must enter a valid age-appropriate date.
